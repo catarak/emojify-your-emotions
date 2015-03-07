@@ -9,6 +9,7 @@ var Webcam = {
     var _this = this;
 
     function handleVideo(stream) {
+      $("#start-button").show();
       _this.video = document.querySelector("#videoElement");
       _this.video.src = window.URL.createObjectURL(stream);
       _this.video.play();

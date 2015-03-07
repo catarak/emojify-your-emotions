@@ -5,6 +5,7 @@ $(function() {
   init();
 
   $("#start-button").click(function(e) {
+    $(this).hide();
     clmTracker.startVideo();
     loop();
   });
