@@ -57,6 +57,6 @@ ClmTracker.prototype.drawEmoji = function() {
     this.overlayCC.rotate(rotationTheta);
     this.overlayCC.drawImage(img, -imgWidth/2, -imgWidth/2, imgWidth, imgWidth);
     this.overlayCC.restore();
-    this.ctracker.draw(this.overlay);
+    //this.ctracker.draw(this.overlay);
   }
 }
