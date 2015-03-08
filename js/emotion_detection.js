@@ -24,6 +24,7 @@ ClmTracker.prototype.startVideo = function() {
 }
 
 ClmTracker.prototype.update = function() {
+  this.overlayCC.clearRect(0, 0, 500, 375);
   this.currentParams = this.ctracker.getCurrentParameters();
 }
 
@@ -34,13 +35,11 @@ ClmTracker.prototype.drawEmoji = function() {
   if (er.length > 0) {
     var _this = this;
     var maxEr = _.max(er, function(item) { return item.value });
-    if (maxEr.value > maxVal) {
+    //if (maxEr.value > maxVal) {
       this.maxEmotion = maxEr.emotion;
-    }
+    //}
     console.log(this.maxEmotion);
   }
-
-  this.overlayCC.clearRect(0, 0, 500, 375);
 
   var positions = this.ctracker.getCurrentPosition();
   if (positions) {
